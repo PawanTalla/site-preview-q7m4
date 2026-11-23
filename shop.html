@@ -3,34 +3,47 @@
 <head><meta name="robots" content="noindex, nofollow, noarchive"><style>.pv-strip{background:#FFF4D6;color:#3B2F12;font:600 12.5px/1.4 system-ui,sans-serif;text-align:center;padding:6px 12px}.kit-client [data-placeholder]{outline:none!important}.kit-client [data-placeholder]::after{content:none!important;display:none!important}.look-pick{display:none!important}</style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ernie’s Positively Good</title>
-<meta name="description" content="Every Ernie’s treat for dogs and cats, with Subscribe & Save and free shipping over $30.">
-<link rel="icon" href="data:,">
+<title>Shop all treats | Ernie’s Positively Good</title>
+<meta name="description" content="Jerky, soft and freeze-dried dog treats, plus salmon treats for cats. Every recipe lists a meat or fish first. Mix any recipes into one box.">
+<script>
+/* Phone LCP: the unfiltered grid opens on the sampler and the best seller (shop.js loads both cards eagerly at high
+   priority), and so does the dog view. Start those two photos now instead of after the scripts below. Skipped on links
+   that open on another first card (cats, a texture, a leave-out filter). */
+(function () {
+  if (/[?&](t|no)=|[?&]pet=cat|[?&]f=(cat|jerky|soft|freeze|big)/.test(location.search)) return;
+  var Z = '(max-width: 760px) 46vw, (max-width: 1100px) 30vw, 290px';
+  [['img/v2/shop/m/sampler-bags-360.webp 360w, img/v2/shop/sampler-bags.webp 640w', 'img/v2/shop/sampler-bags.webp'],
+   ['img/v2/shop/m/sweet-potato-360.webp 360w, img/treat/sweet-potato-500.webp 500w', 'img/treat/sweet-potato-500.webp']].forEach(function (x) {
+    var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image'; l.href = x[1];
+    l.setAttribute('imagesrcset', x[0]); l.setAttribute('imagesizes', Z); l.setAttribute('fetchpriority', 'high');
+    document.head.appendChild(l);
+  });
+})();
+</script>
+<link rel="icon" href="img/v2/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/v2/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/v2/brand/apple-touch-180.png">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/motifs.css">
-<link rel="stylesheet" href="assets/css/ern.css">
-<link rel="stylesheet" href="assets/css/looks.css">
+<link rel="stylesheet" href="assets/fonts/v2/fonts.css">
+<link rel="stylesheet" href="assets/css/v2/core.css">
+<link rel="stylesheet" href="assets/css/v2/shop.css">
 <script src="data/site.config.js"></script>
 <script src="data/catalog.js"></script>
 <script src="data/images.js"></script>
 <script src="data/content.js"></script>
-<script src="data/ugv.js"></script>
 <script src="data/sizes.js"></script>
-<script src="data/life.js"></script>
-<script src="data/cut.js"></script>
-<script src="data/icons.js"></script><script src="data/shoot.js"></script>
+<script src="data/shoot.js"></script>
+<script src="data/facts.js"></script>
+<script src="data/uiicons.js"></script>
 <script src="assets/js/kit.js"></script><script src="assets/js/preview-guard.js"></script>
 <script src="assets/js/engine/promo.js"></script>
 <script src="assets/js/engine/plans.js"></script>
 <script src="assets/js/ern.js"></script>
 </head>
 <body class="page-shop"><div class="pv-strip">Preview of the new Ernie’s site · not a live store · checkout is off</div>
-<div class="ern-topbar"><span>Free shipping on orders over $30</span><i aria-hidden="true"></i><span>Subscribe: 20% off your first order</span><i aria-hidden="true"></i><a class="ern-topbar__m" href="about.html#giving"><img src="img/brand/autism-mission-mark.svg" alt="" width="18" height="18" data-placeholder="autism-mission-logo"><span>Learn about our autism mission</span></a></div>
 <div id="kit-header"></div><script>KIT.header({ page: 'shop' });</script>
 <main id="shop"></main>
-<script src="assets/js/pages/ern-shop.js"></script>
+<script src="assets/js/pages/shop.js"></script>
 <div id="kit-footer"></div><script>KIT.footer();</script>
 </body>
 </html>
